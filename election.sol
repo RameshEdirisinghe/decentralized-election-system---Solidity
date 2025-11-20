@@ -8,4 +8,8 @@ contract SLElection{
         string party;
         uint256 voteCount;
     }
+    mapping(uint256 => Candidate) public candidates;
+    mapping(address => bool) public hasVoted;
+    uint256 public candidateCount;
+    
 }
