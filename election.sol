@@ -15,4 +15,14 @@ contract SLElection{
     constructor(){
         candidateCount = 0; 
     }
+
+    function addCondidate(string memory _name, string memory _party, string memory _description) public {
+        candidateCount ++;
+        candidates[candidateCount] = Candidate ({
+            name: _name,
+            description: _description,
+            party: _party,
+            voteCount: 0
+        });
+    }
 }
