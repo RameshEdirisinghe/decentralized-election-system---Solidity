@@ -24,5 +24,13 @@ contract SLElection{
             party: _party,
             voteCount: 0
         });
+    
+    }
+
+    function vote(uint256 _candidateID) public {
+        require(!hasVoted[msg.sender], "Soz, you can only vote one time");
+        require(_candidateID > 0 && _candidateID <= candidateCount);
+        candidates[_candidateID].voteCount ++;
+        hasVoted[msg.sender] = true;
     }
 }
