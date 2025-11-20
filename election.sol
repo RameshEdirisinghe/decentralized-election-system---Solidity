@@ -33,4 +33,22 @@ contract SLElection{
         candidates[_candidateID].voteCount ++;
         hasVoted[msg.sender] = true;
     }
+
+    function getWinner() public view returns (string memory winnerName, uint256 totalVotes, string memory winnerParty){
+        require(candidateCount > 0,"You cannot vote for a candidate, if no one is a candidate");
+
+        uint256 highestVotes;
+        uint256 winingID;
+
+        for (uint256 i = 1; i <= candidateCount; i++) 
+        {
+            if (candidates[i].voteCount > highestVotes){
+                highestVotes = candidates[i].voteCount;
+                winingID = i;
+            }
+        }
+        winnerName = candidates[winingID].name;
+        totalVotes = candidates[winingID].voteCount;
+        winnerParty = candidates[winingID].party;
+    }
 }

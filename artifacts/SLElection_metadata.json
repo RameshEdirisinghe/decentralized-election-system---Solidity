@@ -81,6 +81,29 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "getWinner",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "winnerName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalVotes",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "winnerParty",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -97,6 +120,19 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_candidateID",
+						"type": "uint256"
+					}
+				],
+				"name": "vote",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -128,11 +164,11 @@
 	},
 	"sources": {
 		"election.sol": {
-			"keccak256": "0xa8745d05cb0d8c13a0ce833e2be1d8a8104017ca006a98818c719582e3f887b2",
+			"keccak256": "0x7bf5fdb3f31e11c787b9e53d5a152521f756c23e60c9788f6bf62a62848311d8",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://db8ba5b14573120e05ab8bd646d88a3b00377102a89a48da2371f912bc823089",
-				"dweb:/ipfs/QmdTv8pu1hcanFX2bhVRhCCnxK4rquwSaMZzPw9zrbcS8w"
+				"bzz-raw://9af6a1993135e9835b7af8fade361d6b8c205f838f992e8f113a911079b26607",
+				"dweb:/ipfs/QmUvHd5aSqbiWEz9PLeJAdeK5fydNpVNuSkGZs5hJRZeuP"
 			]
 		}
 	},
